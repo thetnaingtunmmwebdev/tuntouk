@@ -1,8 +1,19 @@
 @extends("layouts.app")
 @section('content')
     <div class="container">
-        {{ $vehicles->links() }}
-        <div class="col-md-6"><a class="text-warning text-md-end" href="{{ url('/vehicles/add') }}"> + Add Vehicle (မော်တော်ယာဥ်အသစ်ထည့်သွင်းရန်)</a></div><br>
+        {{ $vehicles->links() }}        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <a class="text-md-start text-warning" href="{{ url('/vehicles/add') }}"> + Add Vehicle (မော်တော်ယာဥ်အသစ်ထည့်သွင်းရန်)</a>                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <p class="text-md-end text-info"> Total : {{ $vehicles->count(); }}</p>
+                </div>
+            </div>
+        </div><br>
         <div class="">            
             <form action="/vehicles/search">
                 @csrf
