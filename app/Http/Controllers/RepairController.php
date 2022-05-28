@@ -40,8 +40,7 @@ class RepairController extends Controller
         $validator = validator(request()->all(), [
             'vehicle_id' => 'required',
             'repair_complain' => 'required',
-            'repair_diagnostic' => 'required',
-            'repair_services' => 'required',
+            'repair_diagnostic' => 'required',            
             'repair_parts' => 'required',
             'repair_remarks' => 'required',
             'repair_received_date' => 'required',
@@ -56,8 +55,7 @@ class RepairController extends Controller
         $repair = new Repair();
         $repair->vehicle_id = $id;
         $repair->repair_complain = request()->repair_complain;
-        $repair->repair_diagnostic = request()->repair_diagnostic;
-        $repair->repair_services = request()->repair_services;
+        $repair->repair_diagnostic = request()->repair_diagnostic;    
         $repair->repair_parts = request()->repair_parts;
         $repair->repair_remarks = request()->repair_remarks;        
         $repair->repair_received_date = date('Y-m-d ' , strtotime(request()->repair_received_date));

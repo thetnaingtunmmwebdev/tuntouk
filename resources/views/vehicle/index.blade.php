@@ -15,7 +15,7 @@
             </div>
         </div><br>
         <div class="">            
-            <form action="/vehicles/search">
+            <form action="{{ url('/vehicles/search')  }}">
                 @csrf
                 <div class="input-group mb-3">
                     <input type="text" name="search" class="form-control" placeholder="Search by Vehicle Number (မော်တော်ယာဥ်နံပါတ်ဖြင့်ရှာပါ)"
@@ -45,10 +45,7 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <p class="text-md-end text-secondary">Vehicle Type (ယာဥ်အမျိုးအစား)</p>
-                            </div>
-                            <div class="row">
-                                <p class="text-md-end text-secondary">Chassis Number (ဘောင်အမှတ်)</p>
-                            </div>
+                            </div>                            
                             <div class="row">
                                 <p class="text-md-end text-secondary">Engine Number (အင်ဂျင်အမှတ်)</p>
                             </div>
@@ -60,16 +57,10 @@
                             </div>
                             <div class="row">
                                 <p class="text-md-end text-secondary">Owner Name (ယာဥ်ပိုင်ရှင်အမည်)</p>
-                            </div>
-                            <div class="row">
-                                <p class="text-md-end text-secondary">Address (နေရပ်လိပ်စာ)</p>
-                            </div>
+                            </div>                            
                             <div class="row">
                                 <p class="text-md-end text-secondary">Phone (ဖုန်း)</p>
-                            </div>
-                            <div class="row">
-                                <p class="text-md-end text-secondary">Email (အီးမေးလ်)</p>
-                            </div>
+                            </div>                            
                             <div class="row"><a class="text-md-end text-primary"
                                     href="{{ url("/repairs/$vehicle->id") }}">View Records (ပြင်ဆင်စာရင်းကြည့်မယ်)</a>
                             </div>
@@ -77,10 +68,7 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <p>{{ $vehicle->vehicle_type }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $vehicle->chassis_number }}</p>
-                            </div>
+                            </div>                            
                             <div class="row">
                                 <p>{{ $vehicle->engine_number }}</p>
                             </div>
@@ -92,16 +80,10 @@
                             </div>
                             <div class="row">
                                 <p>{{ $vehicle->owner_name }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $vehicle->address }}</p>
-                            </div>
+                            </div>                           
                             <div class="row">
                                 <p>{{ $vehicle->phone }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $vehicle->email }}</p>
-                            </div>
+                            </div>                            
                             <div class="row"><a href="{{ url("/repairs/$vehicle->id/add") }}" class="text-warning">New Record
                                     (စာရင်းအသစ်ထည့်သွင်းမည်)</a>
                             </div>

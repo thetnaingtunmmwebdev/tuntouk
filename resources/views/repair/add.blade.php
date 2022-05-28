@@ -29,8 +29,12 @@
                     </div>
                     <div class="mb-3">
                         <label>Replace Parts (ပြောင်းလဲတတ်ဆင်သောအပိုပစ္စည်း)</label>
-                        <input type="text" name="repair_parts" class="form-control">
-                    </div>
+                        {{-- <input type="text" name="repair_parts" class="form-control"> --}}
+                        <textarea name="repair_parts" class="form-control" cols="30" rows="10"></textarea>
+                    </div>                    
+                </div>
+                <div class="col-md-6">
+                    
                     <div class="mb-3">
                         <label>Received Date (လက်ခံရက်)</label>
                         <input type="date" name="repair_received_date" class="form-control">
@@ -47,8 +51,7 @@
                         <label>Remark (မှတ်ချက်)</label>
                         <input type="text" name="repair_remarks" class="form-control">
                     </div>
-                </div>
-                <div class="col-md-6">
+
                     <br>
                     <a href="{{ url()->previous() }}" class="btn btn-secondary">Back (နောက်သို့ပြန်သွားမည်)</a>
                     <input type="submit" value="Save (သိမ်းမည်)" class="btn btn-success">

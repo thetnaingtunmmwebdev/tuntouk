@@ -17,15 +17,12 @@ class CreateVehiclesTable extends Migration
             $table->id();
             $table->string('vehicle_number');
             $table->string('vehicle_type');
-            $table->string('chassis_number');
-            $table->string('engine_number');
-            $table->string('vehicle_color');
-            $table->string('vehicle_year');
-            $table->string('member_number');
+            $table->string('engine_number')->nullable();
+            $table->string('vehicle_color')->nullable();
+            $table->string('vehicle_year')->nullable();
+            $table->string('member_number')->nullable();
             $table->string('owner_name');
-            $table->string('address');
             $table->string('phone');
-            $table->string('email');
             $table->timestamps();
         });
     }

@@ -26,10 +26,7 @@
                         <label>Vehicle Type (ယာဥ်အမျိုးအစား)</label>
                         <input type="text" name="vehicle_type" class="form-control">
                     </div>
-                    <div class="mb-3">
-                        <label>Chassis Number (ဘောင်အမှတ်)</label>
-                        <input type="text" name="chassis_number" class="form-control">
-                    </div>
+                    
                     <div class="mb-3">
                         <label>Engine Number (အင်ဂျင်အမှတ်)</label>
                         <input type="text" name="engine_number" class="form-control">
@@ -48,19 +45,12 @@
                         <label>Owner Name(ယာဥ်ပိုင်ရှင်အမည်)</label>
                         <input type="text" name="owner_name" class="form-control">
                     </div>
-                    <div class="mb-3">
-                        <label>Address (နေရပ်လိပ်စာ)</label>
-                        <textarea name="address" class="form-control"></textarea>
-                    </div>
+                    
                     <div class="mb-3">
                         <label>Phone (ဖုန်း)</label>
                         <input type="text" name="phone" class="form-control">
                     </div>
-                    <div class="mb-3">
-                        <label>Email (အီးမေးလ်)</label>
-                        <input type="email" name="email" class="form-control">
-                    </div>
-
+                    <br>
                     <a href="{{ url()->previous() }}" class="btn btn-secondary">Back (နောက်သို့ပြန်သွားမည်)</a>
                     <input type="submit" value="Save (သိမ်းမည်)" class="btn btn-success">
                     

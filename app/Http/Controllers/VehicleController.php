@@ -42,15 +42,13 @@ class VehicleController extends Controller
         $validator = validator(request()->all(), [
             'member_number' => 'required',
             'vehicle_number' => 'required',
-            'vehicle_type' => 'required',
-            'chassis_number' => 'required',
+            'vehicle_type' => 'required',            
             'engine_number' => 'required',
             'vehicle_color' => 'required',
             'vehicle_year' => 'required',
-            'owner_name' => 'required',
-            'address' => 'required',
+            'owner_name' => 'required',            
             'phone' => 'required',
-            'email' => 'required',
+            
         ]);
 
         if ($validator->fails()) {
@@ -61,14 +59,11 @@ class VehicleController extends Controller
         $vehicle->member_number = request()->member_number;
         $vehicle->vehicle_number = request()->vehicle_number;
         $vehicle->vehicle_type = request()->vehicle_type;
-        $vehicle->chassis_number = request()->chassis_number;
         $vehicle->engine_number = request()->engine_number;
         $vehicle->vehicle_color = request()->vehicle_color;
         $vehicle->vehicle_year = request()->vehicle_year;
         $vehicle->owner_name = request()->owner_name;
-        $vehicle->address = request()->address;
         $vehicle->phone = request()->phone;
-        $vehicle->email = request()->email;
         $vehicle->save();
         return redirect('/vehicles');
     }

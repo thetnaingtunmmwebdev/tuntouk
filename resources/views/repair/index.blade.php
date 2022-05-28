@@ -33,58 +33,73 @@
             <div class="collapse" id="col{{ $repair->id }}">
                 <div class="card card-body mb-2 bg-dark">
                     <div class="row text-white p-3">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="row">
-                                <p class="text-md-end text-secondary">Complain (တင်ပြချက်)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Complain (တင်ပြချက်)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $repair->repair_complain }}</p>
+                                </div>
                             </div>
                             <div class="row">
-                                <p class="text-md-end text-secondary">Diagnostic (စစ်ဆေးခြင်း)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Diagnostic (စစ်ဆေးခြင်း)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $repair->repair_diagnostic }}</p>
+                                </div>
                             </div>
                             <div class="row">
-                                <p class="text-md-end text-secondary">Services & Repair (ပြုပြင်ခြင်း)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Services & Repair (ပြုပြင်ခြင်း)</p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $repair->repair_services }}</p>
+                                </div>
                             </div>
                             <div class="row">
-                                <p class="text-md-end text-secondary">Replace Parts (ပြောင်းလဲတပ်ဆင်သောအပိုပစ္စည်း)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Replace Parts (ပြောင်းလဲတပ်ဆင်သောအပိုပစ္စည်း)</p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <pre>{{ $repair->repair_parts }}</pre>
+                                </div>
                             </div>
                             <div class="row">
-                                <p class="text-md-end text-secondary">Received Date (လက်ခံရက်)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Received Date (လက်ခံရက်)</p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $repair->repair_received_date }}</p>
+                                </div>
                             </div>
                             <div class="row">                                
-                                <p class="text-md-end text-secondary">Delivered Date (ပြန်အပ်ရက်)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Delivered Date (ပြန်အပ်ရက်)</p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $repair->repair_delivered_date }}</p>
+                                </div>
                             </div>
                             <div class="row">                                
-                                <p class="text-md-end text-secondary">Repair By (ပြင်ဆင်သူ)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Repair By (ပြင်ဆင်သူ)</p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $repair->repair_technician_id }}</p>
+                                </div>
                             </div>
                             <div class="row">                                
-                                <p class="text-md-end text-secondary">Remark (မှတ်ချက်)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Remark (မှတ်ချက်)</p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $repair->repair_remarks }}</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <p>{{ $repair->repair_complain }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $repair->repair_diagnostic }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $repair->repair_services }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $repair->repair_parts }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $repair->repair_received_date }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $repair->repair_delivered_date }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $repair->repair_technician_id }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $repair->repair_remarks }}</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

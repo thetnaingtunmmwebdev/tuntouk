@@ -17,11 +17,10 @@ class CreateRepairsTable extends Migration
         Schema::create('repairs', function (Blueprint $table) {
             $table->id();
             $table->integer('vehicle_id');
-            $table->string('repair_complain');
-            $table->string('repair_diagnostic');
-            $table->string('repair_services');
+            $table->string('repair_complain')->nullable();
+            $table->string('repair_diagnostic')->nullable();
             $table->string('repair_parts');
-            $table->string('repair_remarks');
+            $table->string('repair_remarks')->nullable();
             $table->date('repair_received_date')->nullable();
             $table->date('repair_delivered_date')->nullable();
             $table->string('repair_technician_id');
