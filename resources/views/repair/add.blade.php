@@ -22,13 +22,9 @@
                     <div class="mb-3">
                         <label>Diagnostic (စစ်ဆေးခြင်း)</label>
                         <input type="text" name="repair_diagnostic" class="form-control">
-                    </div>
+                    </div>                    
                     <div class="mb-3">
-                        <label>Services & Repair (ပြုပြင်ခြင်း)</label>
-                        <input type="text" name="repair_services" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Replace Parts (ပြောင်းလဲတတ်ဆင်သောအပိုပစ္စည်း)</label>
+                        <label>Replace Parts & Repair (ပြောင်းလဲတတ်ဆင်သောအပိုပစ္စည်း နှင့် ပြုပြင်ခြင်း)</label>
                         {{-- <input type="text" name="repair_parts" class="form-control"> --}}
                         <textarea name="repair_parts" class="form-control" cols="30" rows="10"></textarea>
                     </div>                    
