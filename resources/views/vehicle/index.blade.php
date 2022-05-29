@@ -1,7 +1,6 @@
 @extends("layouts.app")
 @section('content')
-    <div class="container">
-        {{ $vehicles->links() }}        
+    <div class="container">        
         <div class="row">
             <div class="col-md-6">
                 <div class="row">
@@ -42,50 +41,71 @@
             <div class="collapse" id="col{{ $vehicle->id }}">
                 <div class="card card-body mb-2 bg-dark">
                     <div class="row text-white p-3">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="row">
-                                <p class="text-md-end text-secondary">Vehicle Type (ယာဥ်အမျိုးအစား)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Vehicle Type (ယာဥ်အမျိုးအစား)</p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $vehicle->vehicle_type }}</p>
+                                </div>
                             </div>                            
                             <div class="row">
-                                <p class="text-md-end text-secondary">Engine Number (အင်ဂျင်အမှတ်)</p>
-                            </div>
-                            <div class="row">
-                                <p class="text-md-end text-secondary">Vehicle Color (အရောင်)</p>
-                            </div>
-                            <div class="row">
-                                <p class="text-md-end text-secondary">Year (ကားထုတ်လုပ်သည့်ခုနှစ်)</p>
-                            </div>
-                            <div class="row">
-                                <p class="text-md-end text-secondary">Owner Name (ယာဥ်ပိုင်ရှင်အမည်)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Member No (အသင်းဝင်အမှတ်)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $vehicle->member_number }}</p>
+                                </div>
                             </div>                            
                             <div class="row">
-                                <p class="text-md-end text-secondary">Phone (ဖုန်း)</p>
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Engine Number (အင်ဂျင်အမှတ်)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $vehicle->engine_number }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Vehicle Color (အရောင်)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $vehicle->vehicle_color }}</p></div>                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Year (ကားထုတ်လုပ်သည့်ခုနှစ်)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $vehicle->vehicle_year }}</p>
+                                </div>                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Owner Name (ယာဥ်ပိုင်ရှင်အမည်)</p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $vehicle->owner_name }}</p>
+                                </div>
                             </div>                            
-                            <div class="row"><a class="text-md-end text-primary"
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary">Phone (ဖုန်း)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ $vehicle->phone }}</p>
+                                </div>
+                            </div>                            
+                            <div class="row">
+                                <div class="text-md-end col-md-6">
+                                    <a class="text-primary"
                                     href="{{ url("/repairs/$vehicle->id") }}">View Records (ပြင်ဆင်စာရင်းကြည့်မယ်)</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <p>{{ $vehicle->vehicle_type }}</p>
-                            </div>                            
-                            <div class="row">
-                                <p>{{ $vehicle->engine_number }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $vehicle->vehicle_color }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $vehicle->vehicle_year }}</p>
-                            </div>
-                            <div class="row">
-                                <p>{{ $vehicle->owner_name }}</p>
-                            </div>                           
-                            <div class="row">
-                                <p>{{ $vehicle->phone }}</p>
-                            </div>                            
-                            <div class="row"><a href="{{ url("/repairs/$vehicle->id/add") }}" class="text-warning">New Record
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="{{ url("/repairs/$vehicle->id/add") }}" class="text-md-start text-warning">New Record
                                     (စာရင်းအသစ်ထည့်သွင်းမည်)</a>
+                                </div>
                             </div>
                         </div>
                     </div>

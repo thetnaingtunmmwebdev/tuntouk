@@ -16,7 +16,7 @@ class VehicleController extends Controller
     
     public function index()
     {
-        $data = Vehicle::latest()->paginate(5);
+        $data = Vehicle::latest()->get();
 
         return view('vehicle.index', [
             'vehicles' => $data
@@ -31,7 +31,7 @@ class VehicleController extends Controller
     public function search()
     {
         $search = request()->search;
-        $data = Vehicle::where('vehicle_number', 'like' , '%'.$search.'%')->paginate(5);
+        $data = Vehicle::where('vehicle_number', 'like' , '%'.$search.'%');
         return view('vehicle.index', [
             'vehicles' => $data
         ]);
