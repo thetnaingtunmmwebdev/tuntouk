@@ -27,4 +27,6 @@ Route::get('/vehicles/search', [VehicleController::class, 'search']);
 Route::get('/repairs/{id}', [RepairController::class, 'index']);
 Route::get('/repairs/{id}/add', [RepairController::class, 'add']);
 Route::post('/repairs/{id}/add', [RepairController::class, 'create']);
+Route::get('/repairs/{id}/edit', [RepairController::class, 'edit']);
+Route::post('/repairs/{id}/edit', [RepairController::class, 'update']);
 // Route::get('/repairs/search', [RepairController::class, 'search']);

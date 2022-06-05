@@ -49,15 +49,7 @@
                                 <div class="col-md-6">
                                     <p>{{ $repair->repair_diagnostic }}</p>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="text-md-end text-secondary">Services & Repair (ပြုပြင်ခြင်း)</p>                                
-                                </div>
-                                <div class="col-md-6">
-                                    <p>{{ $repair->repair_services }}</p>
-                                </div>
-                            </div>
+                            </div>                            
                             <div class="row">
                                 <div class="col-md-6">
                                     <p class="text-md-end text-secondary">Replace Parts (ပြောင်းလဲတပ်ဆင်သောအပိုပစ္စည်း)</p>                                
@@ -96,6 +88,14 @@
                                 </div>
                                 <div class="col-md-6">
                                     <p>{{ $repair->repair_remarks }}</p>
+                                </div>
+                            </div>
+                            <div class="row">                                
+                                <div class="col-md-6">
+                                    <p class="text-md-end text-secondary"></p>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <a class="text-md-start text-warning" href="{{ url("/repairs/$vehicle_id/edit") }}"> + Edit Repair Record (ပြင်ဆင်စာရင်းအားပြင်ဆင်မည်)</a>                    
                                 </div>
                             </div>
                         </div>
