@@ -31,7 +31,7 @@ class VehicleController extends Controller
     public function search()
     {
         $search = request()->search;
-        $data = Vehicle::where('vehicle_number', 'like' , '%'.$search.'%');
+        $data = Vehicle::where('vehicle_number', 'like' , '%'.$search.'%')->get();
         return view('vehicle.index', [
             'vehicles' => $data
         ]);
