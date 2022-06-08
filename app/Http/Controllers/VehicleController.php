@@ -67,4 +67,41 @@ class VehicleController extends Controller
         $vehicle->save();
         return redirect('/vehicles');
     }
+
+    public function edit($id)
+    {
+        $data = Vehicle::where('id', $id)->get();
+        return view('vehicle.edit', ['vehicles' => $data]);
+    }
+
+    public function update($id)
+    {
+        $validator = validator(request()->all(), [
+            'member_number' => 'required',
+            'vehicle_number' => 'required',
+            'vehicle_type' => 'required',
+            'engine_number' => 'required',
+            'vehicle_color' => 'required',
+            'vehicle_year' => 'required',
+            'owner_name' => 'required',
+            'phone' => 'required',
+
+        ]);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator);
+        }
+
+        $vehicle = Vehicle::find($id);
+        $vehicle->member_number = request()->member_number;
+        $vehicle->vehicle_number = request()->vehicle_number;
+        $vehicle->vehicle_type = request()->vehicle_type;
+        $vehicle->engine_number = request()->engine_number;
+        $vehicle->vehicle_color = request()->vehicle_color;
+        $vehicle->vehicle_year = request()->vehicle_year;
+        $vehicle->owner_name = request()->owner_name;
+        $vehicle->phone = request()->phone;
+        $vehicle->save();
+        return redirect('/vehicles');
+    }
 }

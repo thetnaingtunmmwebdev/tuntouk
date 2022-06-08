@@ -103,8 +103,17 @@
                                     href="{{ url("/repairs/$vehicle->id") }}">View Records (ပြင်ဆင်စာရင်းကြည့်မယ်)</a>
                                 </div>
                                 <div class="col-md-6">
+                                    <a href="{{ url("/vehicles/$vehicle->id/edit") }}" class="text-md-start text-danger">Edit Vehicle
+                                    (မော်တော်ယာဥ် အချက်အလက်အား ပြင်ဆင်မည်)</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="text-md-end col-md-6">
                                     <a href="{{ url("/repairs/$vehicle->id/add") }}" class="text-md-start text-warning">New Record
                                     (စာရင်းအသစ်ထည့်သွင်းမည်)</a>
+                                </div>
+                                <div class="col-md-6">
+                                    
                                 </div>
                             </div>
                         </div>

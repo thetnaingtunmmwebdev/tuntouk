@@ -22,6 +22,8 @@ Route::get('/', [VehicleController::class, 'index']);
 Route::get('/vehicles', [VehicleController::class, 'index']);
 Route::get('/vehicles/add', [VehicleController::class, 'add']);
 Route::post('/vehicles/add', [VehicleController::class, 'create']);
+Route::get('/vehicles/{id}/edit', [VehicleController::class, 'edit']);
+Route::post('/vehicles/{id}/edit', [VehicleController::class, 'update']);
 Route::get('/vehicles/search', [VehicleController::class, 'search']);
 
 Route::get('/repairs/{id}', [RepairController::class, 'index']);
