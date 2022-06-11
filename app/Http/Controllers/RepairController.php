@@ -68,37 +68,37 @@ class RepairController extends Controller
 
     public function edit($id)
     {
-        $data = Repair::where('vehicle_id', $id)->get();
+        $data = Repair::where('id', $id)->get();
         return view('repair.edit', ['repairs' => $data]);
     }
 
-    public Function update($id)
+    public function update($id)
     {
         $validator = validator(request()->all(), [
             'vehicle_id' => 'required',
             'repair_complain' => 'required',
-            'repair_diagnostic' => 'required',
+            'repair_diagnostic' => 'required',            
             'repair_parts' => 'required',
             'repair_remarks' => 'required',
             'repair_received_date' => 'required',
-            'repair_delivered_date' => 'required',
-            'repair_technician_id' => 'required',
+            'repair_delivered_date' => 'required',            
+            'repair_technician_id' => 'required',        
         ]);
 
         if ($validator->fails()) {
             return back()->withErrors($validator);
         }
-
-        $repair = Repair::find(request()->vehicle_id);
+        $vehicle_id = request()->vehicle_id;
+        $repair = Repair::find($id);
+        $repair->vehicle_id = request()->vehicle_id;
         $repair->repair_complain = request()->repair_complain;
-        $repair->repair_diagnostic = request()->repair_diagnostic;
+        $repair->repair_diagnostic = request()->repair_diagnostic;    
         $repair->repair_parts = request()->repair_parts;
-        $repair->repair_remarks = request()->repair_remarks;
-        $repair->repair_received_date = date('Y-m-d ', strtotime(request()->repair_received_date));
-        $repair->repair_delivered_date = date('Y-m-d ', strtotime(request()->repair_delivered_date));
+        $repair->repair_remarks = request()->repair_remarks;        
+        $repair->repair_received_date = date('Y-m-d ' , strtotime(request()->repair_received_date));
+        $repair->repair_delivered_date = date('Y-m-d ' , strtotime(request()->repair_delivered_date));
         $repair->repair_technician_id = request()->repair_technician_id;
         $repair->save();
-
-        return redirect("/repairs/$id");
+        return redirect("/repairs/$vehicle_id");
     }
 }

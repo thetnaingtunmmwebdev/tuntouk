@@ -95,7 +95,7 @@
                                     <p class="text-md-end text-secondary"></p>                                
                                 </div>
                                 <div class="col-md-6">
-                                    <a class="text-md-start text-warning" href="{{ url("/repairs/$vehicle_id/edit") }}"> + Edit Repair Record (ပြင်ဆင်စာရင်းအားပြင်ဆင်မည်)</a>                    
+                                    <a class="text-md-start text-warning" href="{{ url("/repairs/$repair->id/edit") }}"> + Edit Repair Record (ပြင်ဆင်စာရင်းအားပြင်ဆင်မည်)</a>                    
                                 </div>
                             </div>
                         </div>
