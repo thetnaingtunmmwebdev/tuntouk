@@ -17,7 +17,7 @@ class RepairController extends Controller
 
     public function index($id)
     {
-        $data = Repair::where('vehicle_id', $id)->get();
+        $data = Repair::where('vehicle_id', $id)->get()->sortBy('repair_received_date');
         return view('repair.index', ['repairs' => $data, 'vehicle_id' => $id]);
     }
 
